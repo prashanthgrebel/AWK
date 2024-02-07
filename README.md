@@ -1,7 +1,9 @@
 # AWK
 
-# * awk print from nth column to last
+# * Print all but the first column:
+```
+cat <file> | awk '{$1=""; print $0}'
+cat <file> | awk '{$1=$2=""; print $0}'    
+```
 
-```
-cat <file> | awk '{ for (i=3; i<=NF; i++)   print $i }'
-```
+
